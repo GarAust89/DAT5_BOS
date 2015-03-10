@@ -8,20 +8,21 @@ Course materials for [General Assembly's Data Science course](https://generalass
 
 **[Course Project information](project.md)**
 
-Monday | Wednesday
+Tuesday | Thursday
 --- | ---
 1/20: [Introduction](#class-1-introduction) | 1/22: [Python & Pandas](#class-2-python-&-pandas)
-1/27: [Git and GitHub](#class-3-git-and-github) | 1/29: [Getting Data](#class-4-getting-data)
-2/3: [Advanced Pandas](#class-5-advanced-pandas)<br>**Milestone:** Question and Data Set | 2/5: [Numpy, Machine Learning, KNN](#class-6-numpy-machine-learning-knn)
-2/10:  [scikit-learn, Model Evaluation Procedures](#class-7-scikit-learn-model-evaluation-procedures)| 2/12: [Linear Regression](#class-8-linear-regression)
-2/17: [Logistic Regression,<br>Preview of Other Models](#class-9-logistic-regression-preview-of-other-models) | 2/19: [Model Evaluation Metrics](#class-10-model-evaluation-metrics)<br>**Milestone:** Data Exploration and Analysis Plan
-2/24: [Working a Data Problem](#class-11-working-a-data-problem) | 2/26: [Clustering and Visualization](#class-12-clustering-and-visualization)<br>**Milestone:** Deadline for Topic Changes
-3/3: [Naive Bayes](#class-13-naive-bayes) | 3/5: [Natural Language Processing](#class-14-natural-language-processing)
-3/10: [Decision Trees and Ensembles](#class-15-decision-trees-and-ensembles)<br>**Milestone:** First Draft | 3/12: [Advanced scikit-learn](#class-16-advanced-scikit-learn)
-3/17: **No Class**  | 3/19: [Databases and MapReduce](#class-17-databases-and-mapreduce)
+1/27: [Git and GitHub](#class-3-git-and-github) | 1/29: [SQL](#class-4-SQL)
+2/3: [Supervised Learning and Model Evaluation](#class-5-Supervised-Learning-and-Model-Evaluation) | 2/5: [Linear Regression](#class-6-Linear-and-Logistic-Regression) <br>**Milestone:** Begin Work on Question and Data Set
+2/10:  [Logistic Regression](#class-7-logistic-regression)| 2/12: [Naive Bayes, Decision Trees, and Classification Model Evaluation](#class-8-Naive-Bayes-Decision-Trees-and-Classification-Model-Evaluation)
+2/17: [Data Cleaning and Manipulation](#class-9-Data Cleaning and Manipulation) | 2/19:  Makeup: Logistic Regression
+2/24: [Ensemble Methods and Neural Networks](#class-10-Neural-Networks-and-Ensemble-Methods)| 2/26: [Unsupervised Learning and Dimensionality Reduction](#class-10-Unsupervised-Learning-and-Dimensionality-Reduction) <br>**Milestone:** Data Exploration and Analysis Plan 
+3/3:  [Amazon Web Services & Apache Hive](#class-13-Amazon-Web Services-& Apache-Hive)| 3/5: [Amazon Elastic MapReduce](#class-14-Amazon-Elastic-MapReduce) 
+3/10: [Natural Language Processing](#class-15-natural-language-processing)<br>**Milestone:** First Draft | 3/12: [Advanced scikit-learn](#class-16-advanced-scikit-learn)
+3/17: **No Class**  | 3/19: [Web Scraping and Data Retrieval Methods](#class-17-Web-Scraping-and-Data-Retrieval-Methods)
 3/24: [Recommenders](#class-18-recommenders) | 3/26: [Course Review, Companion Tools](#class-19-course-review-companion-tools)<br>**Milestone:** Second Draft (Optional)
 3/31: [TBD](#class-20-tbd) | 4/2: [Project Presentations](#class-21-project-presentations)
 4/7: [Project Presentations](#class-22-project-presentations) |
+
 
 
 ### Installation and Setup
@@ -46,7 +47,8 @@ Monday | Wednesday
 
 
 ### Class 2: Python & Pandas
-[slides](slides/02_python_in_data_science.pdf)
+[slides](slides/02_python_in_data_science.pdf).  [Python refresher code](code/00_python_refresher.py).  [Python code](code/02_python_example.py). [Pandas code](code/02_pandas_example.py).
+
 * Brief overview of Python
 * Brief overview of Python environments: Python scripting, IPython interpreter, Spyder
 * Working with data in Pandas
@@ -57,7 +59,7 @@ Monday | Wednesday
     * Plotting data
 
 **Homework:**
-* Do the [class homework](https://github.com/justmarkham/DAT4/blob/master/homework/05_pandas.md) by Tuesday.
+* Do the [class homework](/homework/02_pandas.md) by Tuesday.
 * Read through the [project page](project.md) in detail.
 * Review a few [projects from past Data Science courses](https://github.com/justmarkham/DAT-project-examples) to get a sense of the variety and scope of student projects.
 
@@ -69,48 +71,232 @@ Monday | Wednesday
 * [Online Python Tutor](http://pythontutor.com/) is useful for visualizing (and debugging) your code.
 
 
-### Class 3:  Git and GitHub
-* Check for proper setup of Git by running `git clone https://github.com/bbalin12/DAT-project-examples.git`
+### Class 3: Git and GitHub
+* [slides](slides/03_git_and_github.pdf)
+* [GitHub for Windows](https://windows.github.com/)
+* [GitHub for Mac](https://mac.github.com/)
+* [Student directory for this class](https://github.com/bbalin12/DAT5_BOS_students)
 
-### Class 4: Getting Data
-
-### Class 5: Advanced Pandas
-
-
-### Class 6: Numpy, Machine Learning, KNN
-
-
-### Class 7: scikit-learn, Model Evaluation Procedures
-
-
-### Class 8: Linear Regression
+**Homework:**
+* Check for proper setup of Git by forking the [data science project examples](https://github.com/bbalin12/DAT-project-examples.git) and pulling the fork to your local hard drive.
+* Download the following for Class 4:
+	* [SQLite](http://www.sqlite.org/download.html).  Please make sure to download the precompiled binaries for your OS, NOT the source code. 
+	* [Sublime Text Editor](http://www.sublimetext.com/).
+	* [DB Visualizer](http://www.dbvis.com/).  Please download the free version. 
+	* [Baseball archive for SQLite](https://github.com/jknecht/baseball-archive-sqlite/blob/master/lahman2013.sqlite). 
 
 
-### Class 9: Logistic Regression, Preview of Other Models
+### Class 4: SQL
+[slides](slides/04_sql_tutorial.pdf)
+[Python code](code/04_sql_and_pandas.py)
+[SQL code](code/04_sql_tutorial.sql)
+
+[Overview of the baseball archive](data/baseball_database_description.txt)
+* Installation of SQLite, Sublime, DB Visualizer, and our dataset
+* The SELECT statement
+* The WHERE clause
+* ORDER BY
+* LEFT JOIN and INNER JOIN
+* GROUP BY
+* DISTINCT
+* CASE statements
+* Subqueries and IS NOT NULL
+* CREATE TABLE
+* Using Pandas and SQL Seamlessly
+
+**Homework:** 
+* Complete the in-class excercises, if you haven't already:
+	* Find the player with the most at-bats in a single season.
+	* Find the name of the the player with the most at-bats in baseball history.
+	* Find the average number of at_bats of players in their rookie season.
+	* Find the average number of at_bats of players in their final season for all players born after 1980. 
+	* Find the average number of at_bats of Yankees players who began their second season at or after 1980.
+	* Pass the SQL in the previous bullet into a pandas DataFrame and write it back to SQLite.
 
 
-### Class 10: Model Evaluation Metrics
+* Create full, working queries to answer at least four novel questions you have about the dataset using the following concepts:
+	* The WHERE clause
+	* ORDER BY
+	* LEFT JOIN and INNER JOIN
+	* GROUP BY
+	* SELECT DISTINCT
+	* CASE statements
+	* Subqueries and IS NOT NULL
+
+* Using Pandas, (1) query the Baseball dataset, (2) transform the data in some way, and (3) write a new table back to the databse.
+
+* Commit and Sync your SQL and Pandas files to your GitHub fork and issue a pull request.
+
+**Resources:**
+	* [SQLite homepage](https://www.sqlite.org/index.html)
+	* [SQLite Syntax](https://www.sqlite.org/lang.html)
+
+**SQL Tutorials:**
+	* Note: These tutorials are for all flavors of SQL, not just SQLite, so some of the functions may behave differently in SQLite.
+	* [SQL tutorial](http://www.w3schools.com/sql/)
+	* [SQLZoo](http://sqlzoo.net/wiki/Main_Page)
 
 
-### Class 11: Working a Data Problem
+### Class 5: Supervised Learning and Model Evaluation
+[slides](slides/05_ml_knn.pdf)
+[code](code/05_sklearn_and_ml.py)
+* Overview of machine learning
+* Supervised vs unsupervised learning
+* Classification with K-nearest meighbors
+* Training and test sets
+* K-fold cross validation
+* Tuning model paramaters via grid search
+
+**Homework (due 2/10):** 
+* Build a preditive model that predicts whether a player was inducted to the Baseball Hall of Fame before 2000 using their batting, pitching, and fielding results- not the number of votes they received.  Please make sure to use K-fold cross validaiton and grid search to find your best model. 
+* Begin thinking about your class project.  It can be from anywhere you want -- your work, school or general interest. 
+
+### Class 6: Linear Regression
+[slides](slides/06_linear_regression.pdf)
+[code](code/06_linear_regression.py)
+* Overview of regression models
+* Estimating linear regression coefficients
+* Determining model relevance
+* Interpreting model coefficients
+* Gotchas
+* Categorical features
+
+**Homework (due 2/10):** 
+* Using the Baseball dataset, build a linear regression model that predicts how many runs a player will have in a given year.
+	* Begin with more than one possible model; each of which should have at least one categorical dummy feature and at least two continuous explanatory features.
+	* Make sure you check for heteroskedasticity in your models.
+	* Decide whether to include or take out the model's features depending on whether they may be collinear or insignificant. 
+	* Interpret the model's coefficients and intercept.
+	* Calculate the models' R-squared and in-sample RMSE.
+	* Make sure to use a holdout group or k-fold CV to calculate out-of-sample RMSE for your model group.
+	* Decide on the best model to use, and justify why you made that choice. 
+
+### Class 7: Logistic Regression
+[code](code/07_logistic_regression)
+* Comparison to Linear Regression
+* Probability review
+* logistic regression
+* logistic function
+
+** Homework (due 03/02):**
+* Using the baseball dataset, build a logistic regression model that predicts who is likely to be inducted into Hall of Fame.
+  	* Start with considering as many explanatory variables.
+	* What factors are signficant? Reduce your explanatory variables to the ones that are significant.
+	* Compare performance between having many variables vs having a smaller set.
+	* Cross validate your model and print out the coeffecients of the best model.
+	* Considering any two features, generate a scatter plot with a class separable line showing the classification.
+
+### Class 8:  Naive Bayes, Decision Trees, and Classification Model Evaluation
+[slides](slides/08_naive_bayes_decision_trees_model_evaluation.pdf)
+[code](code/08_naive_bayes_decision_trees_model_evaluation.py)
+* Bayes Theorem
+* Naive Bayes Classification
+* Decision Tree Classification
+* Classification Model Evaluation
+	* Confusion Matrices
+	* F1 Score
+	* Cohen's Kappa
+	* Receiver-Operating Characteristic Curves
+
+**Homework (due 2/17):**
+* Build a Naive Bayes and decision tree model for your set of features you have extracted from the Baseball Dataset to predict whether a player was inducted into the Baseball Hall of Fame before the year 2000.  
+* If you haven't already, build a logistic regression model for the same data. 
+* Compare the n-fold cross-validated accuracy, F1 score, and AUC for your three new models, and compare it to the KNN model you built for class 5.
+* Decide which of these models is the most accurate. 
+* For your best performing model, print a confusion matrix and ROC curve in your iPython interpreter for all k cross validation slices. 
+	* See [this link](http://scikit-learn.org/stable/auto_examples/plot_roc_crossval.html#example-plot-roc-crossval-py) for an example of how this is done for an ROC curve. 
+
+### Class 9: Data Cleaning and Manipulation
+[slides](slides/09_data_cleaning_and_manipulation.pdf)
+[code](code/09_data_cleaning_and_manipulation.py)
+* Encoding & Binning Categorical Data
+* Finding Features with Perfect Correlation or No Variation
+* Feature Standardization and Imputation
+* Recursive Feature Elimination
+
+**Homework (due 2/24):**
+* Join your SQL query used in last class' homework (to predict Baseball Hall of Fame indution) with the table we created in today's class (called dominant_team_per_player). 
+* Pick at least one additional categorical feature to include in your data.
+* Bin and encode your categorical features.
+* Remove features with perfect correlation and/or no variation.
+* Scale your data and impute for your numeric NaNs.
+* Perform recursive feature elimination on the data.
+* Decide whether to use grid search to find your 'optimal' model.
+* Bring in data after the year 2000, and preform the same transformations on the data you did with your training data.
+* Predict Hall of Fame induction after the year 2000. 
 
 
-### Class 12: Clustering and Visualization
+### Class 10: Ensemble Methods and Neural Networks
+[slides](slides/10_ ensemble_methods_and_neural_networks.pdf)
+[code](code/10_ensemble_methods_and_neural_networks.py)
+* Random Forests
+* Boosting Trees
+* Neural Networks
+
+**Homework (due 3/3):**
+* Run a Random Forest (RF), Boosting Trees (GBM), and Neural Network (NN) classifier on the data you assembled in the homework from class 9.
+* See which of the methods you've used so far (RF, GBM, NN, Decision Tree, Logistic Regression, Naive Bayes) is the most accurate (measured by ROC AUC).
+* Use grid seach to optimize your NN's tuning parameters for learning_rate, iteration_range, and compoents, as well as any others you'd like to test. 
+
+### Class 11: Unsupervised Learning and Dimensionality Reduction
+[slides](slides/11_dimensionality_reduction_and_clustering.pdf)
+[code](code/11_dimensionality_reduction_and_clustering)
+* K-Means Clustering
+* DBSCAN
+* Hirearchical Clustering
+* Principal Component Analysis
+* Support Vector Machines
+
+**Homework (due 3/3):**
+
+* Find some sort of attribute in the Baseball dataset that sits on a two-dimenstional plane and has discrete clusters.
+* Perform K-Means and DBSCAN clustering.
+* Determine which better represents your data and the intiution behind why the model was the best for your dataset.
+* Plot a dendrogram of your dataset.
+* Using the data from the last homework, perform principal component analysis on your data.
+* Decide how many components to keep
+* Run a Boosting Tree on the components and see if in-sample accuracy beats a classifier with the raw data not trasnformed by PCA.
+* Run a support vector machine on your data
+* Tune your SVM to optimize accuracy
+* Like what you did in class 9, bring in data after 2000, and preform the same transformations on the data you did with your training data.
+* Compare Random Forest, Boosting Tree, and SVM accuracy on the data after 2000.
+* If you wish, see if using PCA improves the accuracy of any of your models.
 
 
-### Class 13: Naive Bayes
+### Class 13: Recommendation Systems
+[slides](slides/13_recommendation_systems.pdf)
+[code](code/13_recommender_systems.py)
+* Collaborative Filtering
+* Content Based Filtering
+* Hybrid Filtering
 
+** Homework
+* [Non-Personalized Recommenders](http://nbviewer.ipython.org/github/python-recsys/recsys-tutorial/blob/master/tutorial/0-Introduction-to-Non-Personalized-Recommenders.ipynb)
+* [yhat](http://help.yhathq.com/v1.0/docs/)
 
-### Class 14: Natural Language Processing
+### Class 14: Natural Language Processing 
+[slides](slides/14_natural_language_processing.pdf)
+* vectorizing text features
+* vector normalization
+* TF-IDF
+* cosine similarity
+* Talk about projects
 
+** Homework 
+* [Text Mining](http://nbviewer.ipython.org/github/robertlayton/authorship_tutorials/blob/master/pyconau2014/PyCon%20AU%202014%20--%20Text%20mining%20online%20data%20with%20scikit-learn.ipynb)
 
-### Class 15: Decision Trees and Ensembles
+** Links
+* [Google n-grams](http://googleresearch.blogspot.com/2006/08/all-our-n-gram-are-belong-to-you.html)
+* [Twitter sentiment analysis](http://www.laurentluce.com/posts/twitter-sentiment-analysis-using-python-and-nltk/)
+
+### Class 15: Amazon Web Services, Elastic MapReduc\
+e and Apache Hive
 
 
 ### Class 16: Advanced scikit-learn
 
 
-### Class 17: Databases and MapReduce
+### Class 17: Web Scraping and Data Retrieval Methods
 
 
 ### Class 18: Recommenders
